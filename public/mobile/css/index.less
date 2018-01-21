@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 45px;
+    background: #fff;
+}
+
+
+/* 头部 */
+
+.lt_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: orangered;
+    padding: 10px;
+    height: 45px;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    .lt_title {
+        position: relative;
+        color: white;
+        i {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+
+/* 内容 */
+
+.lt_container {
+    position: relative;
+    img {
+        width: 100%;
+        display: block;
+    }
+    .mui-slider-indicator {
+        margin-bottom: 20px;
+    }
+    /* 商品导航 */
+    .lt_nav {
+        a {
+            float: left;
+            width: 33.3%;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+    /* 商品列表 */
+    .lt_goods_list {
+        width: 100%;
+        a:nth-child(1) {
+            width: 67%;
+            float: left;
+            img {
+                width: 50%;
+                float: left;
+                display: block;
+            }
+        }
+        a:nth-child(2) {
+            width: 33%;
+            float: right;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+        a:nth-child(3) {
+            width: 67%;
+            float: left;
+            img {
+                width: 50%;
+                float: left;
+                display: block;
+            }
+        }
+    }
+}
+
+
+/*底部*/
+
+.lt_footer {
+    height: 50px;
+    background: orangered;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    z-index: 10;
+    a {
+        display: block;
+        float: left;
+        width: 25%;
+        text-align: center;
+        color: #fff;
+        i {
+            font-size: 20px;
+        }
+        p {
+            font-size: 12px;
+            color: white;
+        }
+    }
+}
