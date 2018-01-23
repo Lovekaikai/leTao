@@ -1,41 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
-body {
-  height: 100%;
-}
-body {
-  padding-top: 45px;
-  background: #fff;
-}
-/* 头部 */
-.lt_header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: orangered;
-  padding: 10px;
-  height: 45px;
-  width: 100%;
-  z-index: 10;
-  text-align: center;
-}
-.lt_header .lt_title {
-  position: relative;
-  color: white;
-}
-.lt_header .lt_title i {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 /* 内容 */
 .lt_container {
+  height: 100%;
   position: relative;
   /* 商品导航 */
   /* 商品列表 */
+  /* 品牌 */
 }
 .lt_container img {
   width: 100%;
@@ -54,6 +23,8 @@ body {
 }
 .lt_container .lt_goods_list {
   width: 100%;
+  border-top: 1px solid #ccc;
+  margin: 5px 0;
 }
 .lt_container .lt_goods_list a:nth-child(1) {
   width: 67%;
@@ -81,29 +52,52 @@ body {
   float: left;
   display: block;
 }
-/*底部*/
-.lt_footer {
-  height: 50px;
-  background: orangered;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+.lt_container .lt_brand img {
   width: 100%;
-  padding: 5px 0;
-  z-index: 10;
-}
-.lt_footer a {
   display: block;
-  float: left;
+}
+.lt_container .lt_brand > ul * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lt_container .lt_brand > ul li {
   width: 25%;
+  float: left;
+}
+.lt_container .lt_brand .brand_list .list_border {
+  width: 100%;
+  box-shadow: 0 0 5px #ccc;
   text-align: center;
-  color: #fff;
+  padding: 10px 0;
 }
-.lt_footer a i {
-  font-size: 20px;
+.lt_container .lt_brand .brand_list a {
+  float: left;
+  width: 50%;
+  padding: 0 5px;
+  margin-bottom: 10px;
 }
-.lt_footer a p {
+.lt_container .lt_brand .brand_list a img {
+  display: block;
+  width: 100%;
+}
+.lt_container .lt_brand .brand_list a .brand_list_name {
+  padding: 5px 10px;
+  height: 36px;
+  line-height: 18px;
+}
+.lt_container .lt_brand .brand_list a .new_price {
   font-size: 12px;
+  color: #f30;
+  margin-right: 10px;
+}
+.lt_container .lt_brand .brand_list a .old_price {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: line-through;
+}
+.lt_container .lt_brand .brand_list a button {
+  background: #007aff;
   color: white;
 }
 /*# sourceMappingURL=./index.css.map */

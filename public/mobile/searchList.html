@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘</title>
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.css">
+    <!-- 引进自己的css代码 -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/searchList.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="lt_header">
+        <h4 class="lt_title_right"> 搜索中心
+            <a href="javascript:history.back()"><i class="fa fa-arrow-left"></i></a>
+        </h4>
+    </header>
+    <div class="searchList_container">
+        <!--下拉刷新容器-->
+        <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--数据列表-->
+                <div class="search_box">
+                    <form action class="search_form">
+                        <input placeholder="搜索你喜欢的商品" type="text" class="search_content">
+                    </form>
+                    <a href="javascript:;" class="search_icon">搜索</a>
+                </div>
+                <!-- lt_ goods_tools-工具-->
+                <div class="lt_goods_tools mui-clearfix">
+                    <a href="javascript:;">
+                          上架时间
+                          <span class="mui-icon mui-icon-arrowdown"></span>
+                    </a>
+                    <a href="javascript:;" class="price" data-sortname="price">
+                          价格
+                          <span class="mui-icon mui-icon-arrowdown"></span>
+                    </a>
+                    <a href="javascript:;" class="num" data-sortname="num">
+                          数量
+                          <span class="mui-icon mui-icon-arrowdown"></span>
+                      </a>
+                    <a href="javascript:;">
+                          折扣
+                          <span class="mui-icon mui-icon-arrowdown"></span>
+                      </a>
+                </div>
+                <div class="brand_list mui-clearfix">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部导航栏 -->
+    <footer class="lt_footer mui-clearfix">
+        <a href="index.html">
+            <i class="mui-icon mui-icon-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="./cate.html">
+            <i class="mui-icon mui-icon-bars"></i>
+            <p>分类</p>
+        </a>
+        <a href="cart.html">
+            <i class=" fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="user/index.html">
+            <i class="fa fa-user"></i>
+            <p>会员中心</p>
+        </a>
+    </footer>
+    <!-- 商品数据的模板 -->
+    <script type="text/html" id="goodsTpl">
+        {{each data as item16 }}
+        <a href="javascript:;">
+            <div class="list_border">
+                <img src="{{item16.pic[0].picAddr}}" alt="">
+                <p class="brand_list_name"> {{item16.proName}}</p>
+                <p>
+                    <span class="new_price">￥{{item16.price}}</span>
+                    <span class="old_price">￥{{item16.oldPrice}}</span>
+                </p>
+                <button data-href="./product.html?id={{item16.id}}" class="mui-btn mui-btn-primary mui-btn-outlined">立即购买</button>
+            </div>
+        </a>
+        {{/each}}
+    </script>
+</body>
+<script src="./assets/mui/js/mui.js"></script>
+<script src="./assets/zepto/zepto.min.js"></script>
+<script src="./assets/artTemplate/template.js"></script>
+
+<script src="./js/common.js"></script>
+<script src="js/searchList.js"></script>
+
+</html>

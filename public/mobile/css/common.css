@@ -1,1 +1,76 @@
+html,
+body {
+  height: 100%;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+/* 头部 */
+.lt_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: orangered;
+  padding: 10px;
+  height: 45px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+.lt_header .lt_title {
+  position: relative;
+  color: white;
+}
+.lt_header .lt_title a {
+  color: white;
+}
+.lt_header .lt_title a i {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.lt_header .lt_title_right {
+  position: relative;
+  color: white;
+}
+.lt_header .lt_title_right a {
+  color: white;
+}
+.lt_header .lt_title_right a i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*底部*/
+.lt_footer {
+  height: 50px;
+  background: orangered;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 10;
+}
+.lt_footer a {
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+  color: #fff;
+}
+.lt_footer a i {
+  font-size: 20px;
+}
+.lt_footer a p {
+  font-size: 12px;
+  color: white;
+}
 /*# sourceMappingURL=./common.css.map */

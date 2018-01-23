@@ -1,46 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    padding-top: 45px;
-    background: #fff;
-}
-
-
-/* 头部 */
-
-.lt_header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: orangered;
-    padding: 10px;
-    height: 45px;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
-    .lt_title {
-        position: relative;
-        color: white;
-        i {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-    }
-}
-
 
 /* 内容 */
-
 .lt_container {
+    // position: relative;
+    height: 100%;
     position: relative;
     img {
         width: 100%;
@@ -63,6 +25,8 @@ body {
     /* 商品列表 */
     .lt_goods_list {
         width: 100%;
+        border-top: 1px solid #ccc;
+        margin: 5px 0;
         a:nth-child(1) {
             width: 67%;
             float: left;
@@ -90,32 +54,64 @@ body {
             }
         }
     }
-}
-
-
-/*底部*/
-
-.lt_footer {
-    height: 50px;
-    background: orangered;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0;
-    z-index: 10;
-    a {
-        display: block;
-        float: left;
-        width: 25%;
-        text-align: center;
-        color: #fff;
-        i {
-            font-size: 20px;
+    /* 品牌 */
+    .lt_brand {
+        // padding: 5px;
+        img {
+            width: 100%;
+            display: block;
         }
-        p {
-            font-size: 12px;
-            color: white;
+        >ul {
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            li {
+                width: 25%;
+                float: left;
+            }
+        }
+        .brand_list {
+            // box-sizing: border-box;
+            .list_border {
+                width: 100%;
+                box-shadow: 0 0 5px #ccc;
+                text-align: center;
+                padding: 10px 0;
+            }
+            a {
+                float: left;
+                width: 50%;
+                padding: 0 5px;
+                margin-bottom: 10px;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                .brand_list_name {
+                    padding: 5px 10px;
+                    height: 36px;
+                    line-height: 18px;
+
+                }
+                .new_price {
+                    font-size: 12px;
+                    color: #f30;
+                    margin-right: 10px;
+                }
+                .old_price {
+                    font-size: 12px;
+                    color: #ccc;
+                    text-decoration: line-through;
+                }
+                button {
+                    background: #007aff;
+                    color: white;
+                }
+            }
         }
     }
 }
+
+
