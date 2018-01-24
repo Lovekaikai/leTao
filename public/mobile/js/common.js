@@ -8,6 +8,16 @@ $.extend($, {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.search.substr(1).match(reg);
         if (r != null) return decodeURI(r[2]); return null;
+    },
+    ltajax:function(option) {
+        $.ajax({
+            url:option.url,
+            data:option.data||"",
+            type:option.dataType||"get",
+            success: function (result) {
+                option.success && option.success(result);
+            }
+        })
     }
 })
 

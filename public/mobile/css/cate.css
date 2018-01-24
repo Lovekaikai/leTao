@@ -1,0 +1,36 @@
+.cate_container {
+  height: 100%;
+  position: relative;
+  padding-left: 80px;
+  background-color: #afb2db;
+}
+.cate_container .cate_left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cate_container .cate_left .cate_left_menu li {
+  background: #7f6d7b;
+}
+.cate_container .cate_left .cate_left_menu li a {
+  color: white;
+  display: block;
+  width: 80px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.cate_container .cate_right_content {
+  position: relative;
+  height: 100%;
+}
+.cate_container .cate_right_content .right_menu_ul li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.cate_container .cate_right_content .right_menu_ul li img {
+  width: 100%;
+  display: block;
+}
+/*# sourceMappingURL=./cate.css.map */

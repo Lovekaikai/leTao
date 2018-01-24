@@ -1,0 +1,53 @@
+.lt_header {
+    .lt_title_register {
+        position: relative;
+        color: white;
+        a {
+            position: absolute;
+            left: 0;
+            display: block;
+            top: 0;
+            i {
+                color: white;
+            }
+        }
+    }
+}
+
+.register_container {
+    position: relative;
+    padding: 20px 0;
+    .mui-btn {
+        width: 100%;
+        margin-top: 10px;
+        background: orangered;
+        border: 1px solid orangered;
+    }
+    input[type='submit']:enabled:active,
+    input[type='submit'].mui-active:enabled,
+    .mui-btn-primary:enabled:active,
+    .mui-btn-primary.mui-active:enabled,
+    .mui-btn-blue:enabled:active,
+    .mui-btn-blue.mui-active:enabled {
+        background: orange;
+        border: 1px solid orange;
+    }
+    a {
+        padding: 10px 10px 0 0;
+        float: right;
+        font-size: 14px;
+    }
+    .register_code {
+        input {
+            float: left;
+            width: 60%; // border: 1px solid orangered;
+            border-bottom: 1px solid #ccc;
+        }
+        button {
+            width: 35%;
+            float:right;
+            margin: 0;
+            padding: 10px;
+        }
+    }
+}

@@ -49,6 +49,10 @@
   padding: 2px;
   margin-top: 5px;
 }
+.product_container .pro_size i.active {
+  background: #615b67;
+  color: white;
+}
 .product_container .pro_num {
   padding: 10px 5px;
 }
@@ -78,13 +82,18 @@
 .pro_footer .pro_btn .btn-left {
   float: left;
   width: 48%;
-  background: green;
-  color: white;
+  background: #fddfab;
+  color: orangered;
+}
+.pro_footer .pro_btn .mui-btn-positive,
+.pro_footer .pro_btn .mui-btn-success,
+.pro_footer .pro_btn .mui-btn-green {
+  border: 1px solid #fddfab;
 }
 .pro_footer .pro_btn .btn-right {
   float: right;
   width: 48%;
-  background: purple;
-  color: white;
+  background: #e69a8d;
+  color: orangered;
 }
 /*# sourceMappingURL=./product.css.map */

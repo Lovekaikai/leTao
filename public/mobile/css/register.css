@@ -1,0 +1,49 @@
+.lt_header .lt_title_register {
+  position: relative;
+  color: white;
+}
+.lt_header .lt_title_register a {
+  position: absolute;
+  left: 0;
+  display: block;
+  top: 0;
+}
+.lt_header .lt_title_register a i {
+  color: white;
+}
+.register_container {
+  position: relative;
+  padding: 20px 0;
+}
+.register_container .mui-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: orangered;
+  border: 1px solid orangered;
+}
+.register_container input[type='submit']:enabled:active,
+.register_container input[type='submit'].mui-active:enabled,
+.register_container .mui-btn-primary:enabled:active,
+.register_container .mui-btn-primary.mui-active:enabled,
+.register_container .mui-btn-blue:enabled:active,
+.register_container .mui-btn-blue.mui-active:enabled {
+  background: orange;
+  border: 1px solid orange;
+}
+.register_container a {
+  padding: 10px 10px 0 0;
+  float: right;
+  font-size: 14px;
+}
+.register_container .register_code input {
+  float: left;
+  width: 60%;
+  border-bottom: 1px solid #ccc;
+}
+.register_container .register_code button {
+  width: 35%;
+  float: right;
+  margin: 0;
+  padding: 10px;
+}
+/*# sourceMappingURL=./register.css.map */

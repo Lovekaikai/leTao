@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
 </head>
-
 <body>
     <!-- 头部 -->
     <header class="lt_header">
@@ -24,81 +23,82 @@
     <div class="product_container">
         <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
             <div class="mui-scroll">
-                <!-- 轮播图 -->
-                <div class="mui-slider">
-                    <div class="mui-slider-group mui-slider-loop">
-                        <div class="mui-slider-item mui-slider-item-duplicate">
-                            <a href="#"><img src="./images/detail.jpg" /></a>
-                        </div>
-                        <div class="mui-slider-item">
-                            <a href="#">   <img src="./images/product.jpg" /> </a>
-                        </div>
-                        <div class="mui-slider-item">
-                            <a href="#">  <img src="./images/detail.jpg" />   </a>
-                        </div>
-                        <!--支持循环，需要重复图片节点-->
-                        <div class="mui-slider-item mui-slider-item-duplicate">
-                            <a href="#">  <img src="./images/product.jpg" /> </a>
-                        </div>
-                    </div>
-                    <!-- 索引 -->
-                    <div class="mui-slider-indicator">
-                        <div class="mui-indicator mui-active"></div>
-                        <div class="mui-indicator"></div>
-                    </div>
-                </div>
-                <!-- pro_info -->
-                <div class="pro_info">
-                    匡威三星标1970s converse复刻142334c 144757c三星标黑色高帮
-                </div>
-                <div class="pro_price">
-                    <span>价格: </span>
-                    <span>￥500</span>
-                    <span>￥999.1</span>
-                </div>
-                <!-- 尺码 -->
-                <div class="pro_size">
-                    <span>尺码: </span>
-                    <i>41</i>
-                    <i>42</i>
-                    <i>43</i>
-                    <i>44</i>
-                    <i>45</i>
-                    <i>46</i>
-                    <i>47</i>
-                    <i>48</i>
-                    <i>49</i>
-                    <i>50</i>
-                    <i>51</i>
-                    <i>52</i>
-                    <i>53</i>
-                </div>
-                <!-- 数字输入框 -->
-                <div class="pro_num">
-                    <span>数量</span>
-                    <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
-                        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
-                        <input class="mui-numbox-input" type="number" />
-                        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
-                    </div>
-                    <span>剩余20件</span>
-                </div>
+
             </div>
         </div>
-    </div>
     </div>
     <!-- 底部导航栏 -->
     <footer class="pro_footer">
         <span class="fa fa-shopping-cart"></span>
         <div class="pro_btn mui-clearfix">
-            <button type="button" class="btn-left mui-btn mui-btn-success mui-btn-outlined">绿色</button>
-            <button type="button" class="btn-right mui-btn mui-btn-warning mui-btn-outlined">黄色</button>
+            <button type="button" class="btn-left mui-btn mui-btn-success mui-btn-outlined">购物车</button>
+            <button type="button" class="btn-right mui-btn mui-btn-warning mui-btn-outlined">立即购买</button>
         </div>
     </footer>
+    <script type="text/html" id="templeID">
+        <!-- 轮播图 -->
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#"><img src="{{pic[pic.length-1].picAddr}}" /></a>
+                </div>
+                {{each pic as imgItem}}
+                <div class="mui-slider-item"> <a href="#">   <img src="{{imgItem.picAddr}}" /> </a> </div>
+                {{/each}}
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">  <img src="{{pic[0].picAddr}}" /> </a>
+                </div>
+            </div>
+            <!-- 索引 -->
+            <div class="mui-slider-indicator">
+                {{each pic as imgItem index}} {{if index==0}}
+                <div class="mui-indicator mui-active"></div>
+                {{/if}} {{if index!=0}}
+                <div class="mui-indicator"></div>
+                {{/if}}
+                 {{/each}}
+            </div>
+        </div>
+        <!-- pro_info -->
+        <div class="pro_info">
+            {{proName}}
+        </div>
+        <div class="pro_price">
+            <span>价格: </span>
+            <span>￥{{price}}</span>
+            <span>￥{{oldPrice}}</span>
+        </div>
+        <!-- 尺码 -->
+        <div class="pro_size">
+            <span>尺码: </span>
+            {{each addSize as value}}
+                <i>{{value}}</i>
+            {{/each}}
+        </div>
+        <!-- 数字输入框 -->
+        <div class="pro_num">
+            <span>数量</span>
+            <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{num}}'>
+                <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                <input class="mui-numbox-input" type="number" />
+                <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+            </div>
+            <span>剩余20件</span>
+        </div>
+        </div>
+
+
+
+
+    </script>
+
 </body>
 <script src="./assets/mui/js/mui.js"></script>
 <script src="./assets/zepto/zepto.min.js"></script>
 <script src="./assets/artTemplate/template.js"></script>
 <script src="./js/common.js"></script>
 <script src="js/product.js"></script>
+
 </html>

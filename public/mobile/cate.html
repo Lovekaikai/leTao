@@ -1,1 +1,80 @@
-欢迎
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘</title>
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.css">
+    <!-- 引进自己的css代码 -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cate.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="lt_header">
+        <h4 class="lt_title_right"> 乐淘分类
+            <a href="javascript:history.back()"><i class="fa fa-arrow-left"></i></a>
+        </h4>
+    </header>
+    <div class="cate_container">
+
+        <!--这里放置真实显示的DOM内容-->
+        <div class="cate_left">
+            <ul class="cate_left_menu">
+
+                <li><a href="#">女士馆</a></li>
+                <li><a href="#">运动馆</a></li>
+                <li><a href="#">男士馆</a></li>
+                <li><a href="#">帆布馆</a></li>
+                <li><a href="#">男士馆</a></li>
+            </ul>
+        </div>
+
+        <div class="cate_right_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="right_menu">
+                        <ul class="right_menu_ul mui-clearfix">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部导航栏 -->
+    <footer class="lt_footer mui-clearfix">
+        <a href="/mobile/index.html">
+            <i class="mui-icon mui-icon-home"></i>
+            <p>首页</p>
+        </a>
+        <a href="/mobile/cate.html">
+            <i class="mui-icon mui-icon-bars"></i>
+            <p>分类</p>
+        </a>
+        <a href="/mobile/cart.html">
+            <i class=" fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </a>
+        <a href="/mobile/user/index.html">
+            <i class="fa fa-user"></i>
+            <p>会员中心</p>
+        </a>
+    </footer>
+</body>
+<script src="./assets/mui/js/mui.js"></script>
+<script src="./assets/artTemplate/template.js"></script>
+<script src="./assets/zepto/zepto.min.js"></script>
+<script src="js/search.js"></script>
+<script src="js/cate.js"></script>
+    <script type="text/html" id="temple">
+        {{each rows as item}}
+            <li data-id="{{item.id}}"><a href="#">{{item.categoryName}}</a></li>
+        {{/each}}
+</script>
+
+</html>
