@@ -16,7 +16,7 @@ $(function () {
                         queryProductDetail(function (result) {
                             console.log(result)
                             // console.log(result)
-                            result.addSize = sizeFromat(result.size)
+                            result.addSize = $.sizeFromat(result.size)
                             var html = template("templeID", result);
                             $(".mui-scroll").html(html);
                             mui(".mui-numbox").numbox()
@@ -44,33 +44,23 @@ $(function () {
             callback && callback(res);
         })
     }
-    function sizeFromat(str) {
-        var startNum = str.split("-")[0];
-        var endNum = str.split("-")[1];
-        var Arraysize = [];
-        for (var i = startNum; i <= endNum; i++) {
-            Arraysize.push(i);
-        }
-        return Arraysize;
-    }
-
-var size;
-    $(".product_container").on("tap",".pro_size i",function(e) {
+    var size;
+    $(".product_container").on("tap", ".pro_size i", function (e) {
         $(this).addClass("active").siblings().removeClass("active");
-        size=$(this).html();
+        size = $(this).html();
     })
-    $(".btn-left ").on("tap",function() {
-
-        if ($(".product_container .pro_size i.active").length==0){
-             mui.toast('请选择尺码') 
-            return ;
-        }
-        if ($(".mui-numbox-input").val()<1){
-            mui.toast('请选择数量') ;
+    $(".btn-left ").on("tap", function () {
+        console.log(1)
+        if ($(".product_container .pro_size i.active").length == 0) {
+            mui.toast('请选择尺码')
             return;
         }
-        var addCartObj={
-            productId:$.getQueryString("id"),
+        if ($(".mui-numbox-input").val() < 1) {
+            mui.toast('请选择数量');
+            return;
+        }
+        var addCartObj = {
+            productId: $.getQueryString("id"),
             num: $(".mui-numbox-input").val(),
             size: size
         }
@@ -91,26 +81,24 @@ var size;
         // })
 
         $.ltajax({
-            url:"/cart/addCart",
+            url: "/cart/addCart",
             data: addCartObj,
-            dataType:"post",
-            success:function (result) {
-                if (result.error && result.error == 400){
+            type: "post",
+            success: function (result) {
+                if (result.error && result.error == 400) {
                     location.href = "./user/login.html?returnUrl=" + location.href;
                 } else {
-                mui.confirm( '你确定加入购物车吗',"我的宝贝",function(data) {
-                    // console.log(index)
-                       if(data.index==1){
-                           console.log(1)
-                           location.href ="/mobile/cart.html"
-                       }
-                }, 'div') 
+                    mui.confirm('你确定加入购物车吗', "我的宝贝", function (data) {
+                        if (data.index == 1) {
+                            location.href = "/mobile/cart.html"
+                        }
+                    }, 'div')
 
 
-            }
+                }
 
             }
         })
-  
+
     })
 })

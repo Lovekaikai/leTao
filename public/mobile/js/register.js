@@ -27,6 +27,7 @@ $(function () {
 
         $.get("/user/vCode", function (res) {
             vcode = res.vCode;
+            console.log(vcode)
         })
 
     })

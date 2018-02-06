@@ -2,8 +2,7 @@ $(function () {
     init()
 
     function init() {
-        
-
+    
         $(".mui-btn").on("tap",function () {
             var username = $(".mui-input-clear").val();
             var password = $(".mui-input-password").val();

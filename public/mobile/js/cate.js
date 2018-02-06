@@ -7,7 +7,6 @@ $(function () {
         /* 初始化 */
         var id=1;
         ulTempateGet(id);
-
         /* 获取菜单的列表 */
         $.get("/category/queryTopCategory", function (res) {
             var html = template("temple", res)
@@ -20,7 +19,6 @@ $(function () {
             ulTempateGet(id);
         })
     }
-
     function ulTempateGet(id) {
         $.get("/category/querySecondCategory?id=" + id, function (res) {
             var rows = res.rows;

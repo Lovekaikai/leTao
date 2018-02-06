@@ -1,0 +1,26 @@
+.lt_header .lt_title_addressAdd {
+  position: relative;
+  color: white;
+}
+.lt_header .lt_title_addressAdd a {
+  position: absolute;
+  left: 0;
+  display: block;
+  top: 0;
+}
+.lt_header .lt_title_addressAdd a i {
+  color: white;
+}
+.addressUpdate {
+  padding: 10px;
+}
+.addressUpdate .addBtnAddress {
+  width: 100%;
+  background: orangered;
+  border: 1px solid orangered;
+  color: white;
+}
+.addressUpdate .address_second {
+  height: 100px;
+}
+/*# sourceMappingURL=./addressAdd.css.map */

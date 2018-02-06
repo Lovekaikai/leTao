@@ -1,0 +1,14 @@
+.bg_login {
+  background: #222d32;
+}
+.bg_login .container .panel-primary {
+  padding: 0;
+  margin-top: 150px;
+}
+.bg_login .container .panel-primary .panel-heading {
+  text-align: center;
+}
+.bg_login .container .panel-primary .login {
+  margin-left: 50px;
+}
+/*# sourceMappingURL=./login.css.map */

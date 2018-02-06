@@ -1,0 +1,51 @@
+.lt_header .lt_title_address {
+  position: relative;
+  color: white;
+}
+.lt_header .lt_title_address a {
+  position: absolute;
+  left: 0;
+  display: block;
+  top: 0;
+}
+.lt_header .lt_title_address a i {
+  color: white;
+}
+.add_address {
+  height: 30px;
+  background: white;
+  border: 1px solid #ccc;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+.add_address a {
+  width: 100%;
+  display: block;
+  color: black;
+}
+.add_all a {
+  display: block;
+  padding: 0px 10px;
+  font-size: 12px;
+  color: black;
+}
+.add_all a .email {
+  float: left;
+}
+.add_all a .address_user {
+  text-indent: 20px;
+}
+.add_all a .address_message {
+  font-size: 12px;
+  color: #ccc;
+  white-space: normal;
+  height: 20px;
+  padding-right: 20px;
+  width: 300px;
+  line-height: 25px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*# sourceMappingURL=./address.css.map */

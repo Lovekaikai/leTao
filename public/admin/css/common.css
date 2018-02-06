@@ -1,0 +1,121 @@
+body,
+html {
+  height: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  padding-left: 180px;
+  position: relative;
+}
+.It_header_nav {
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  background: #3c8dbc;
+  left: 0;
+  top: 0;
+}
+.It_header_nav h2 {
+  margin: 0;
+}
+.It_header_nav h2 a {
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.It_header_nav .It_nav {
+  width: 180px;
+  height: 100%;
+  background: salmon;
+  background: #222d32;
+}
+.It_header_nav .It_nav .It_nav_top {
+  padding: 20px 15px;
+  color: #f2eeef;
+}
+.It_header_nav .It_nav .It_nav_top img {
+  width: 50px;
+  border-radius: 50%;
+}
+.It_header_nav .It_nav .It_nav_top span {
+  color: #fff;
+  font-size: 12px;
+}
+.It_header_nav .It_nav .It_nav_bottom {
+  color: #aaaaaa;
+}
+.It_header_nav .It_nav .It_nav_bottom li {
+  padding-top: 20px;
+  padding: 10px 15px;
+  text-indent: 10px;
+}
+.It_header_nav .It_nav .It_nav_bottom li.active {
+  background: #1d1f21;
+}
+.It_header_nav .It_nav .It_nav_bottom li a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+.It_header_nav .It_nav .It_nav_bottom li .It_bottom {
+  display: none;
+}
+.It_header_nav .It_nav .It_nav_bottom li .It_bottom a {
+  color: inherit;
+  padding: 0;
+  display: block;
+  padding: 5px 0 0 20px;
+}
+.It_tools {
+  height: 50px;
+  background: #3c8dbc;
+  width: 100%;
+  padding: 20px 20px;
+  color: white;
+}
+.It_tools span {
+  cursor: pointer;
+}
+.headerShow {
+  padding-left: 0;
+}
+.It_header_nav_show {
+  display: none;
+}
+.crearfix::after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+.It_content {
+  padding: 20px 50px;
+  overflow: auto;
+}
+.It_content .It_box {
+  min-width: 1200px;
+}
+.It_content .It_box #main1 {
+  float: left;
+}
+.It_content .It_box #main2 {
+  float: right;
+}
+/*# sourceMappingURL=./common.css.map */
